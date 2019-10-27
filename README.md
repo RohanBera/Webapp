@@ -4,6 +4,7 @@ Creating a simple streaming application, or as Pranav would call it, **"Gareebo 
 
 * [x] sign in page front end
 * [x] sign up page front end
-* [ ] start working on back end in php
+* [x] sign up back end in php
+* [ ] sign in back end in php (has to be in the same page i guess)
 * [ ] will implement them using Angular later
 * [ ] probably learn django, shift from php to django
