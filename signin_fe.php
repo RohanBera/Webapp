@@ -41,7 +41,7 @@
             .outbox {
                 height: 600px;
                 width: 450px;
-                background-color: rgb(0, 0, 0, 0.6);
+                background-color: rgb(0, 0, 0, 0.4);
                 /* opacity: 0.4; makes everything tranparent */
             }
 
@@ -70,14 +70,16 @@
         </style>
     </head>
 
-    <body style="background-color: rgb(133, 22, 22)">
+    <body style="background-color: white">
+        <?php include_once("header.php"); ?>
+
         <div class="outbox outpos">
             <div class="inbox inpos">
                 <h1 >Sign In</h1>
 
-                <form>
-                    <input class="inputfields" type="text" placeholder="Username" >
-                    <input class="inputfields" type="password" placeholder="Password">
+                <form action="POST" action="signin.html">
+                    <input class="inputfields" type="text" name="uname" placeholder="Username (Email)" >
+                    <input class="inputfields" type="password" name="pwd" placeholder="Password">
                     <br />
                     <input class="signinbutton" type="submit" value="Sign In">
 

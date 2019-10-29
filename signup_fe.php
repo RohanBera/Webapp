@@ -12,7 +12,7 @@
             .outbox {
                 height: 800px;
                 width: 600px;
-                background-color: rgb(0, 0, 0, 0.6);
+                background-color: rgb(0, 0, 0, 0.4);
                 /* opacity: 0.4; makes everything tranparent */
             }
 
@@ -72,6 +72,10 @@
                 border-radius: 10px;
             }
 
+            .disabled {
+                opacity: 0.4;
+            }
+
             .text {
                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                 color: orange;
@@ -129,32 +133,57 @@
                 cursor: pointer;
             } 
         </style>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $('#pwd, #confpwd').on('keyup', function(){
+                    if ($('#pwd').val() == $('#confpwd').val())
+                    {
+                        $('#message').html('Passwords match').css('color', 'green');
+                        $('#subbut').prop('disabled', false);
+                        $('#subbut').removeClass('disabled');
+                    }
+                    else 
+                    {
+                        $('#message').html('Passwords do not match').css('color', 'red');
+                        $('#subbut').prop('disabled', true);
+                        $('#subbut').addClass('disabled');
+                    }
+                });
+            });
+        </script>
     </head>
 
-    <body>
+    <body style="background-color: white;">
+        <?php include_once("header.php"); ?>
+
         <div class="outbox outpos">
-        <div class="inbox inpos">
-        <h1>Sign Up</h1>
+            <div class="inbox inpos">
+                <h1>Sign Up</h1>
 
-        <form>
-            <b class="text" >Username :</b> <br />
-            <input class="inputfields uname" type="text" placeholder="First Name">
-            <input class="inputfields uname" type="text" placeholder="Last Name"> <br />
+                <form method="POST" action="signup.php">
+                    <b class="text" >Username :</b> <br />
+                    <input class="inputfields uname" type="text" name="fname" placeholder="First Name" required>
+                    <input class="inputfields uname" type="text" name="lname" placeholder="Last Name" required> <br />
 
-            <b class="text" >Choose your plan :</b> <br />
+                    <b class="text" >Choose your plan :</b> <br />
 
-            <input class="form-radio" type="radio" name="plan" value="user"> <b class="text white"> User </b> 
-            <input class="form-radio" type="radio" name="plan" value="admin"> <b class="text white"> Admin </b> <br />
-            <br /> 
-            <b class="text">A few credentials :</b> <br />
+                    <input class="form-radio" type="radio" name="plan" value="user" required> <b class="text white"> User </b> 
+                    <input class="form-radio" type="radio" name="plan" value="admin" required> <b class="text white"> Admin </b> <br />
+                    <br /> 
+                    <b class="text">A few credentials :</b> <br />
 
-            <input class="inputfields" type="email" placeholder="Email Address"> <br />
-            <input class="inputfields" type="password" placeholder="Set Password"> <br />
-            <input class="inputfields" type="password" placeholder="Verify Password"> <br />
+                    <input class="inputfields" type="email" name="mail" placeholder="Email Address" required> <br />
+                    
+                    <input class="inputfields" type="password" name="pwd" id="pwd" placeholder="Set Password" required> <br />
+                    <input class="inputfields" type="password" name=""    id="confpwd" placeholder="Verify Password" required> <br />
 
-            <input class="signinbutton" type="submit" value="Sign up">
-        </form>
-        </div>
+                    <span class="text" id="message" ></span>
+                    <input class="signinbutton" type="submit" name="subbut" id="subbut" value="Sign up">
+                </form>
+            </div>
         </div>
     </body>
 </html>
