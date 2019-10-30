@@ -11,6 +11,11 @@
     $result = mysqli_query($conn, $query);
     // max we'll get 1, as repetations handled in signup.php
 
-    
+    if ($row = mysqli_fetch_array($result)) {
+		echo "login successful";
+		// header("location:welcomepage.php");
+	} else {
+		echo "Incorrect Email or Password!!!";
+	}
 
 ?>

@@ -1,5 +1,23 @@
 <html>
     <head>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">  </script>
+
+        <script>
+            $(document).ready(function (){
+                $('li a').click(function(e){
+                    $('li.active').removeClass('active');
+
+                    var $child  = $(this);
+                    var $parent = $(this).parent();
+                    $parent.addClass('active');
+                    e.preventDefault();
+
+                    var temp = $child.attr("href");
+                    window.location.href = temp;
+                });
+            });        
+        </script> -->
+
         <style>
             ul {
                 list-style-type: none;
@@ -33,6 +51,7 @@
 
             li a:hover {
                 background-color: black;
+                box-shadow: 0 0 2px 2px orange;
             }
 
             .active {
@@ -43,8 +62,8 @@
 
     <body>
         <ul>
-            <li><a class="active" href>Home</a></li>
-            <li><a>Series</a></li>
+            <li><a href>Home</a></li>
+            <li><a href="series.php">Series</a></li>
             <li><a>Contact</a></li>
             <li style="float: right"><a href="signup_fe.php">Sign Up</a></li>
             <li style="float: right; border-left: 1px solid white"><a href="signin_fe.php">Sign In</a></li>

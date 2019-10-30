@@ -163,15 +163,16 @@
             <div class="inbox inpos">
                 <h1>Sign Up</h1>
 
-                <form method="POST" action="signup.php">
+                <form method="POST" action="signup_be.php">
                     <b class="text" >Username :</b> <br />
                     <input class="inputfields uname" type="text" name="fname" placeholder="First Name" required>
                     <input class="inputfields uname" type="text" name="lname" placeholder="Last Name" required> <br />
 
                     <b class="text" >Choose your plan :</b> <br />
 
-                    <input class="form-radio" type="radio" name="plan" value="user" required> <b class="text white"> User </b> 
-                    <input class="form-radio" type="radio" name="plan" value="admin" required> <b class="text white"> Admin </b> <br />
+                    <input class="form-radio" type="radio" name="plan" value="Silver" required> <b class="text white"> Silver </b> 
+                    <input class="form-radio" type="radio" name="plan" value="Gold" required> <b class="text white"> Gold </b> 
+                    <input class="form-radio" type="radio" name="plan" value="Platinum" required> <b class="text white"> Platinum </b> <br />
                     <br /> 
                     <b class="text">A few credentials :</b> <br />
 

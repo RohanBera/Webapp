@@ -77,7 +77,7 @@
             <div class="inbox inpos">
                 <h1 >Sign In</h1>
 
-                <form action="POST" action="signin.html">
+                <form method="POST" action="signin_be.php">
                     <input class="inputfields" type="text" name="uname" placeholder="Username (Email)" >
                     <input class="inputfields" type="password" name="pwd" placeholder="Password">
                     <br />

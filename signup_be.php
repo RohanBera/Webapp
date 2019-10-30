@@ -18,7 +18,8 @@
     }
     else
     {
-        echo ("registration succesful. Sign In <a href=\"signin.html\">here</a>");
+        echo ("registration succesful.");
+        header("location: signin_fe.php");
     }
 
     mysqli_close($conn);
