@@ -72,19 +72,29 @@
 
     <body style="background-color: white">
         <?php include_once("header.php"); ?>
+        <?php include_once("signin_be.php"); ?>
 
         <div class="outbox outpos">
             <div class="inbox inpos">
                 <h1 >Sign In</h1>
 
-                <form method="POST" action="signin_be.php">
+                <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">
                     <input class="inputfields" type="text" name="uname" placeholder="Username (Email)" >
                     <input class="inputfields" type="password" name="pwd" placeholder="Password">
                     <br />
                     <input class="signinbutton" type="submit" value="Sign In">
-
                 </form>
+
+                <span class="error"><?php if (isset($error_msg)) {echo $error_msg; } ?> </span>
+
+                <div class="new user">
+                    New to ????? <a href="signup_fe.php">Sign up here.</a> 
+                </div>
             </div>
         </div>
+
+
+        
     </body>
 </html>
+
