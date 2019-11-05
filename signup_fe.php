@@ -12,7 +12,7 @@
             .outbox {
                 height: 800px;
                 width: 600px;
-                background-color: rgb(0, 0, 0, 0.4);
+                background-color: rgb(0, 0, 0, 0.85);
                 /* opacity: 0.4; makes everything tranparent */
             }
 
@@ -132,12 +132,41 @@
                 -moz-osx-font-smoothing: grayscale;
                 cursor: pointer;
             } 
+
+            /* background */
+
+            a {
+                color: orange;
+            }
+
+            .bg {
+                height: 100%;
+
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover; 
+            }
+
+            /* footer */
+
+            .bottom-text {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 110%;
+                color: white;
+
+                position: absolute;
+                bottom: 0;
+            }
+
         </style>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
         <script>
             $(document).ready(function(){
+                $('li.active').removeClass('active');
+                $("#signup").addClass('active');
+                
                 $('#pwd, #confpwd').on('keyup', function(){
                     if ($('#pwd').val() == $('#confpwd').val())
                     {
@@ -154,11 +183,14 @@
                 });
             });
         </script>
+
+        <?php 
+            include_once("header.php");
+            // session on, why name isnt coming??
+        ?>
     </head>
 
-    <body style="background-color: white;">
-        <?php include_once("header.php"); ?>
-
+    <body class="bg" background="./imgs/collage/collage.png">
         <div class="outbox outpos">
             <div class="inbox inpos">
                 <h1>Sign Up</h1>
@@ -184,6 +216,10 @@
                     <span class="text" id="message" ></span>
                     <input class="signinbutton" type="submit" name="subbut" id="subbut" value="Sign up">
                 </form>
+
+                <div class="bottom-text">
+                    Already have an account? &nbsp;&nbsp;&nbsp;&nbsp; <a href="signin_fe.php">Sign In here.</a>
+                </div>
             </div>
         </div>
     </body>
