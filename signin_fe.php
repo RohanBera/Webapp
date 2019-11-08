@@ -2,6 +2,8 @@
     <head>
         <title> MeTube Sign In </title>
 
+        <!-- <link rel = "icon" href="./imgs/collage/icon.jpeg"  type = "image/x-icon">  -->
+
         <style>
             h1 {
                 margin-top: 0px;
@@ -90,6 +92,12 @@
                 background-size: cover; 
             }
 
+            .error {
+                color: red;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 130%;
+            }
+
         </style>
                 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -102,16 +110,15 @@
         </script>    
 
         <?php 
+            include_once("header.php");
+            include_once("signin_be.php");  
+
+            // session_start();
+
             if (isset($_SESSION['active_user']))
             {
-                // echo '<alert>Already logged in! Log out to sign in through a different account </alert>'; 
-                // do somthing abt the abv line 
-                header("location: series.php");
-            }
-            else
-            {
-                include_once("header.php");
-                include_once("signin_be.php");     
+                echo "<script>window.location.href='welcome.php';</script>";
+                // header("location: welcome.php");
             }
         ?>
 
@@ -130,7 +137,7 @@
                     <input class="signinbutton" type="submit" value="Sign In">
                 </form>
 
-                <!-- <span class="error"><?php if (isset($error_msg) && $error_msg != "") {echo $error_msg; } ?> </span> -->
+                <span class="error"><?php if (isset($error_msg) && $error_msg != "") {echo $error_msg; } ?> </span>
 
                 <div class="bottom-text">
                     New to MeTube ? &nbsp;&nbsp;&nbsp;&nbsp; <a style="float: right;" href="signup_fe.php">Sign up here.</a> 

@@ -1,5 +1,9 @@
 <html>
     <head>
+        <title>MeTube Sign Up</title>
+
+        <!-- <link rel = "icon" href="./imgs/collage/icon.jpeg"  type = "image/x-icon">  -->
+
         <style>
             h1 {
                 margin-top: 0px;
