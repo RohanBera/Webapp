@@ -14,13 +14,16 @@
 
     if (!mysqli_query($conn, $query))
     {
-        echo ("Email id already exists. Try another email id, or Sign In <a href=\"signin.html\">here</a>");
+        echo ("Email id already exists. Try another email id, or Sign In <a href=\"signin_fe.php\">here</a>");
+        mysqli_close($conn);
     }
     else
     {
         echo ("registration succesful.");
-        header("location: signin_fe.php");
+        mysqli_close($conn);
+        // header("location: signin_fe.php");
+        echo "<script>window.location.href='signin_fe.php';</script>";
+
     }
 
-    mysqli_close($conn);
 ?>
