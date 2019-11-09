@@ -2,9 +2,8 @@
 
 Creating a simple streaming application, or as Pranav would call it, **"Gareebo ka Netflix"**
 
-* [ ] Home page
+* [x] Home page
 * [x] Didnt mean to do this, but ended up doing a header anyways. Its beautiful.
->> Needs to be fine tuned
 * [x] sign in page front end
 * [x] sign up page front end
 * [x] sign up back end in php
@@ -14,7 +13,7 @@ Creating a simple streaming application, or as Pranav would call it, **"Gareebo 
 * [ ] Series page
 >> This will be the Movies page, will add the ACTUAL Series page later. (will need seperate db for that right?)
 
-* [ ] Admin block lmao
+* [x] Admin block lmao
     * [ ] Add new admin
     * [ ] Add new movies
     * [ ] Add new series
