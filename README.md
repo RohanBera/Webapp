@@ -14,12 +14,16 @@ Creating a simple streaming application, or as Pranav would call it, **"Gareebo 
 * [x] Series page
 
 * [x] Admin block lmao
-    * [ ] Add new admin
-    * [ ] Add new movies
-    * [ ] Add new series
+    * [x] Add new admin
+    * [x] Add new movies
+    * [x] Add new series
 
 ## Future goals
 
 * [ ] will implement them using Angular later
 * [ ] probably learn django, shift from php to django
 * [ ] correct a small bug (user can directly get in if he types in the correct url)
+
+----
+
+>> would get many more commits, but I pushed the entire project in one go. So, ya, sad.
