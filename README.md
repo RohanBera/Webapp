@@ -2,12 +2,28 @@
 
 Creating a simple streaming application, or as Pranav would call it, **"Gareebo ka Netflix"**
 
+## Functionality : 
+
+### User 
+
+* Stream movies
+* Select from shows
+* Stream episodes
+
+### Admin
+
+* Upload new movie
+* Upload new series
+* Add new admin
+
+## To-Do
+
 * [x] Home page
-* [x] Didnt mean to do this, but ended up doing a header anyways. Its beautiful.
+* [x] Nice header
 * [x] sign in page front end
 * [x] sign up page front end
 * [x] sign up back end in php
-* [x] sign in back end in php (has to be in the same page i guess)
+* [x] sign in back end in php 
 >> Tells if the username/pwd is correct or not in the same page. Thats cool.
 
 * [x] Movies page
@@ -18,12 +34,4 @@ Creating a simple streaming application, or as Pranav would call it, **"Gareebo 
     * [x] Add new movies
     * [x] Add new series
 
-## Future goals
-
-* [ ] will implement them using Angular later
-* [ ] probably learn django, shift from php to django
-* [ ] correct a small bug (user can directly get in if he types in the correct url)
-
-----
-
->> would get many more commits, but I pushed the entire project in one go. So, ya, sad.
+* [ ] fix bug (user can directly get in if he types in the correct url)
