@@ -1,4 +1,4 @@
-# DBMS Webapp Project
+# Streaming Webapp
 
 Creating a simple streaming application, or as Pranav would call it, **"Gareebo ka Netflix"**
 
